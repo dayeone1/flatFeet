@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,20 +31,23 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String id = edtId.getText().toString();
                 String password = edtPassword.getText().toString();
-                if(id.equals("") || password.equals("")){
-                    Toast.makeText(Login.this, "모든 항목을 입력해주세요", Toast.LENGTH_LONG).show();
-                }
-                else if(!dbHelper.checkUser(id)){
-                    Toast.makeText(Login.this, "존재하지 않는 아이디 입니다." , Toast.LENGTH_LONG).show();
-                }
-                else if (!dbHelper.checkPassword(id, password)) {
-                    Toast.makeText(Login.this, "아이디와 비밀번호가 일치하지 않습니다", Toast.LENGTH_LONG).show();
-                }
-                else{
-                    // 메인 창 만든 이후 수정할 예정
-                    Intent intent = new Intent(getApplicationContext(), SignUp.class);
-                    startActivity(intent);
-                }
+//                if(id.equals("") || password.equals("")){
+//                    Toast.makeText(Login.this, "모든 항목을 입력해주세요", Toast.LENGTH_LONG).show();
+//                }
+//                else if(!dbHelper.checkUser(id)){
+//                    Toast.makeText(Login.this, "존재하지 않는 아이디 입니다." , Toast.LENGTH_LONG).show();
+//                }
+//                else if (!dbHelper.checkPassword(id, password)) {
+//                    Toast.makeText(Login.this, "아이디와 비밀번호가 일치하지 않습니다", Toast.LENGTH_LONG).show();
+//                }
+//                else{
+//                    Intent intent = new Intent(getApplicationContext(), Products.class);
+//                    startActivity(intent);
+//                }
+
+                // 주석 삭제시 이 2줄은 삭제
+                Intent intent = new Intent(getApplicationContext(), Products.class);
+                startActivity(intent);
 
             }
         });

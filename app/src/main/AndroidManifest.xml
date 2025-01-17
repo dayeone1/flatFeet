@@ -22,6 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUp"/>
+        <activity android:name=".Products"/>
+        <activity android:name=".ProductDetail"/>
+        <activity android:name=".Confirm"/>
     </application>
 
 </manifest>
