@@ -74,6 +74,7 @@
             android:id="@+id/registerPWDCH"
             android:background="@drawable/edittext"
             android:layout_width="match_parent"
+            android:inputType="textPassword"
             android:layout_height="50dp"/>
     </LinearLayout>
 
